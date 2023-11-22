@@ -131,21 +131,14 @@ public class CommuteController {
     /*@RequestMapping("/approve")
     public String approve(int commuteNum) {
         CommuteDto cdto = cservice.get(commuteNum);
-        if (cdto.getEditStartTime() != null && cdto.getEditBasicDate() != null) {
-            cdto.setStartTime(cdto.getEditStartTime());
-            cdto.setBasicDate(cdto.getEditBasicDate());
-            cdto.setEditBasicDate("");
-            cdto.setEditStartTime("");
-            cdto.setReason("");
-            cservice.save(cdto);
-        } else if (cdto.getEditEndTime() != null && cdto.getEditBasicDate() != null) {
-            cdto.setEndTime(cdto.getEditEndTime());
-            cdto.setBasicDate(cdto.getEditBasicDate());
-            cdto.setEditBasicDate("");
-            cdto.setEditEndTime("");
-            cdto.setReason("");
-            cservice.save(cdto);
-        }
+        cdto.setStartTime(cdto.getEditStartTime());
+        cdto.setEndTime(cdto.getEditEndTime());
+        cdto.setBasicDate(cdto.getEditBasicDate());
+        cdto.setEditStartTime("");
+        cdto.setEditEndTime("");
+        cdto.setEditBasicDate("");
+        cdto.setReason("");
+        cservice.save(cdto);
         return "redirect:/commute/editRequestList";
     }*/
     
